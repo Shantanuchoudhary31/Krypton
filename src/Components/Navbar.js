@@ -1,10 +1,11 @@
 import { useState } from "react";
+import Hamburger from "../Assets/svg/Hamburger";
 
 export const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
   
     return (
-      <div class="bg-gray-900">
+      <div class="bg-black">
         <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
           <div class="relative flex items-center justify-between">
             <a
@@ -13,10 +14,7 @@ export const Nav = () => {
               title="Company"
               class="inline-flex items-center"
             >
-
-              <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
-                Krypton
-              </span>
+              <img class=" h-8 w-full" src="/kryptonlogo1.png" alt=""/>
             </a>
             <ul class="flex items-center hidden space-x-8 lg:flex">
               <li>
@@ -24,9 +22,9 @@ export const Nav = () => {
                   href="/"
                   aria-label="Our product"
                   title="Our product"
-                  class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                  class="font-medium text-white no-underline hover:text-yellow-500 transition-colors"
                 >
-                  Product
+                  Home
                 </a>
               </li>
               <li>
@@ -34,9 +32,9 @@ export const Nav = () => {
                   href="/"
                   aria-label="Our product"
                   title="Our product"
-                  class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                  class="font-medium text-white no-underline hover:text-yellow-500 transition-colors"
                 >
-                  Features
+                  Services
                 </a>
               </li>
               <li>
@@ -44,9 +42,9 @@ export const Nav = () => {
                   href="/"
                   aria-label="Product pricing"
                   title="Product pricing"
-                  class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                  class="font-medium text-white no-underline hover:text-yellow-500 transition-colors"
                 >
-                  Pricing
+                  About
                 </a>
               </li>
               <li>
@@ -54,9 +52,9 @@ export const Nav = () => {
                   href="/"
                   aria-label="About us"
                   title="About us"
-                  class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                  class="font-medium text-white no-underline hover:text-yellow-500 transition-colors"
                 >
-                  About us
+                  Contact
                 </a>
               </li>
             </ul>
@@ -64,11 +62,21 @@ export const Nav = () => {
               <li>
                 <a
                   href="/"
-                  class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                  class="inline-flex items-center justify-center h-12 px-3 font-medium tracking-wide text-white hover:text-yellow-500 "
                   aria-label="Sign up"
                   title="Sign up"
                 >
-                  Sign up
+                  Login
+                </a>
+              </li>
+              <li className = "z-50">
+                <a
+                  href="/"
+                  class="inline-flex items-center justify-center h-9 px-3 font-medium tracking-wide bg-yellow-600 hover:text-yellow-500 rounded-full z-50"
+                  aria-label="Sign up"
+                  title="Sign up"
+                >
+                  Register
                 </a>
               </li>
             </ul>
@@ -79,23 +87,10 @@ export const Nav = () => {
                 class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
                 onClick={() => setIsMenuOpen(true)}
               >
-                <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
-                  <path
-                    fill="currentColor"
-                    d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"
-                  />
-                  <path
-                    fill="currentColor"
-                    d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"
-                  />
-                  <path
-                    fill="currentColor"
-                    d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"
-                  />
-                </svg>
+                <Hamburger/>
               </button>
               {isMenuOpen && (
-                <div class="absolute top-0 left-0 w-full">
+                <div class="absolute top-0 left-0 w-full z-50">
                   <div class="p-5 bg-white border rounded shadow-sm">
                     <div class="flex items-center justify-between mb-4">
                       <div>
@@ -105,21 +100,6 @@ export const Nav = () => {
                           title="Company"
                           class="inline-flex items-center"
                         >
-                          <svg
-                            class="w-8 text-deep-purple-accent-400"
-                            viewBox="0 0 24 24"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeMiterlimit="10"
-                            stroke="currentColor"
-                            fill="none"
-                          >
-                            <rect x="3" y="1" width="7" height="12" />
-                            <rect x="3" y="17" width="7" height="6" />
-                            <rect x="14" y="1" width="7" height="6" />
-                            <rect x="14" y="11" width="7" height="12" />
-                          </svg>
                           <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                             Krypton
                           </span>
