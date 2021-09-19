@@ -6,9 +6,11 @@ import {About} from '../../Components/About';
 import { Contact } from '../../Components/Contact';
 import { Footer } from '../../Components/Footer';
 
+
+
 function Main() {
     return (
-        <div className = "bg-black ">
+        <div className = "bg-black">
             <Nav />
             <Content />
             <Service />
