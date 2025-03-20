@@ -9,5 +9,6 @@ module.exports = {
      backdropFilter: ['hover', 'focus'],
     }
   },
+  
   plugins: [],
 }
